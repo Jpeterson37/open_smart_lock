@@ -1,0 +1,12 @@
+[Unit]
+Description=Open Smart Lock Service
+
+[Service]
+User=pi
+Type=simple
+WorkingDirectory=/usr/local/bin/open_smart_lock/
+ExecStart=/usr/bin/python3 __init__.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
