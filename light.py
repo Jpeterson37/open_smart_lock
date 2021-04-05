@@ -1,7 +1,5 @@
 from const import *
 
-
-
 def light_bar_on():
     logging.debug("Light Bar On")
     light_out.on()
