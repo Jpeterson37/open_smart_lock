@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from gpiozero import Button
 from func_timeout import func_timeout, FunctionTimedOut
 from const import *

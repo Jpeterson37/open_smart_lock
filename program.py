@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 from const import *
 from light import *
 import time
@@ -6,7 +6,7 @@ import time
 
 
 new_input_pin = ""
-new_input_rfid = ""
+new_input_tag = ""
 
 def program_PIN1_pressed():
     light_bar_blink(1)
@@ -37,6 +37,9 @@ def programing():
     PIN3.when_pressed = program_PIN3_pressed
     PIN4.when_pressed = program_PIN4_pressed
 
+    global new_input_tag
+    new_input_tag = rfid_listen()
+
 def validate_new_pin():
     new_pin = str(Path('pin.txt').read_text().rstrip('\n'))
     if new_input_pin == new_pin:
@@ -54,10 +57,10 @@ def program_write():
         Path('pin.txt').write_text(new_input_pin)
         if validate_new_pin():
             return True
-    elif new_input_rfid:
-        print("Writting new RFID tag: " + new_input_rfid)
+    elif new_input_tag:
+        print("Writting new RFID tag: " + new_input_tag)
         light_bar_blink(4)
-        Path('rfid.txt').write_text('my text')
+        Path('tags.txt').write_text(new_input_tag)
     else:
         print("No new vlues")
         light_bar_on()

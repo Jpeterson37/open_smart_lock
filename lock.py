@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 from const import lock_state_switch, lock_out
 from light import *
 import time

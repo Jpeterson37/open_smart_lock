@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from const import *
 
 def light_bar_on():
