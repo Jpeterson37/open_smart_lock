@@ -33,7 +33,7 @@ if __name__=='__main__':
         Lock_State_Process.start()
         PIN_Process = Process(target = user_PIN())
         PIN_Process.start()
-        #RFID_Process = Process(target = lock_state_change())
+        #RFID_Process = Process(target = capture_tag())
         #RFID_Process.start()
         #MQTT_Process = Process(target = lock_state_change())
         #MQTT_Process.start()
