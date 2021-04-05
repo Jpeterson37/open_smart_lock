@@ -3,11 +3,14 @@ from const import *
 
 def buzzer_on():
     logging.debug("Buzzer On")
-    light_out.on()
+    buzzer_out.on()
 
 def buzzer_off():
     logging.debug("Buzzer Off")
-    light_out.off()
+    buzzer_out.off()
 
-def buzzer_blink(times):
+def buzzer_beep(times):
     buzzer_out.beep(on_time=.3, off_time=.3, n=times, background=True)
+
+buzzer_on()
+pause()

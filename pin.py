@@ -10,19 +10,19 @@ input_pin = ""
 
 
 def PIN1_pressed():
-    buzzer_blink(1)
+    buzzer_beep(1)
     capture_pin("1")
 
 def PIN2_pressed():
-    buzzer_blink(1)
+    buzzer_beep(1)
     capture_pin("2")
 
 def PIN3_pressed():
-    buzzer_blink(1)
+    buzzer_beep(1)
     capture_pin("3")
 
 def PIN4_pressed():
-    buzzer_blink(1)
+    buzzer_beep(1)
     capture_pin("4")
 
 def capture_pin(input):
